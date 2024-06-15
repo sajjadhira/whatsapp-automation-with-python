@@ -39,11 +39,11 @@ def send_message(contact, message):
     # write the used number to the used numbers file
     if not os.path.exists(usedNumbersFile):
         with open(usedNumbersFile, 'w') as file:
-            file.write(contact)
+            file.write(number)
     else:
         # append the used number as a new line
         with open(usedNumbersFile, 'a') as file:
-            file.write('\n' + contact)
+            file.write(number + '\n')
             
             
     time.sleep(3)
